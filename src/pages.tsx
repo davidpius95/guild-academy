@@ -4,13 +4,13 @@ import { ButtonLink, Icon, Metric, PageHero, ProgrammeCard, SectionHead, ThemeTo
 import { alumniWins, ecosystemProof, evidence, exploreNext, faqs, programmes, testimonials, type Evidence } from './data'
 
 function CapabilityMap() {
-  return <div className="capability-map" aria-label="Animated map connecting learning, practice and demonstrated work">
+  return <div className="capability-map" aria-label="Animated map connecting learning, practice, demonstrated work and enterprise readiness">
     <div className="map-grid"/><div className="map-orbit orbit-a"/><div className="map-orbit orbit-b"/>
     <div className="map-node node-core"><span>CAPABILITY</span><img src="/brand/guild-academy-mark-transparent.png" alt="Guild Academy"/></div>
     <div className="map-node node-learn"><i>01</i><b>Learn</b><span>fundamentals</span></div>
     <div className="map-node node-build"><i>02</i><b>Build</b><span>real systems</span></div>
     <div className="map-node node-proof"><i>03</i><b>Prove</b><span>your work</span></div>
-    <div className="map-tag tag-a">REVIEW / 04</div><div className="map-tag tag-b">LAB ACTIVE</div><div className="map-tag tag-c">OUTPUT VERIFIED</div>
+    <div className="map-tag tag-a">04 / ENTERPRISE READY</div><div className="map-tag tag-b">LAB ACTIVE</div><div className="map-tag tag-c">OUTPUT VERIFIED</div>
     <svg className="map-lines" viewBox="0 0 620 540" aria-hidden="true"><path d="M308 267 155 134M312 269 480 132M310 273 472 410"/><circle cx="308" cy="267" r="94"/><path d="M155 134 480 132 472 410Z"/></svg>
   </div>
 }
