@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { createAdmissionsMiddleware, ensureAdmissionsWorkbook } from './server/admissions.mjs'
+import { createPaymentsMiddleware, ensurePaymentsWorkbook } from './server/payments.mjs'
 
 function admissionsApi() {
   return {
@@ -12,6 +13,16 @@ function admissionsApi() {
   }
 }
 
+function paymentsApi() {
+  return {
+    name: 'guild-academy-payments-api',
+    configureServer(server: { middlewares: { use: (middleware: unknown) => void } }) {
+      void ensurePaymentsWorkbook()
+      server.middlewares.use(createPaymentsMiddleware())
+    },
+  }
+}
+
 export default defineConfig({
-  plugins: [react(), admissionsApi()],
+  plugins: [react(), admissionsApi(), paymentsApi()],
 })

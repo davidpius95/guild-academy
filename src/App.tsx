@@ -1,11 +1,13 @@
 import { Route, Routes } from 'react-router-dom'
 import { Layout } from './components'
 import { AboutPage, AdmissionsPage, ApplyPage, CommunityPage, ContactPage, HomePage, InsightsPage, LabsPage, NotFoundPage, OutcomesPage, PartnershipsPage, PortalPage, ProgrammeDetailPage, ProgrammesPage } from './pages'
+import { PaymentPage } from './payment'
 
 export default function App() {
   return <Routes>
     <Route path="/portal" element={<PortalPage/>}/>
     <Route path="/apply" element={<ApplyPage/>}/>
+    <Route path="/pay" element={<PaymentPage/>}/>
     <Route path="*" element={<Layout><Routes>
       <Route path="/" element={<HomePage/>}/>
       <Route path="/programs" element={<ProgrammesPage/>}/>

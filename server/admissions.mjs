@@ -129,6 +129,31 @@ export async function ensureAdmissionsWorkbook(options = {}) {
   return workbookPath
 }
 
+export async function findApplication(submissionId, email, options = {}) {
+  const workbookPath = options.workbookPath || process.env.ADMISSIONS_WORKBOOK_PATH || DEFAULT_WORKBOOK_PATH
+  const normalizedId = typeof submissionId === 'string' ? submissionId.trim() : ''
+  const normalizedEmail = typeof email === 'string' ? email.trim().toLowerCase() : ''
+  if (!/^[0-9a-f-]{36}$/i.test(normalizedId) || !normalizedEmail) return null
+
+  const { worksheet } = await loadWorkbook(workbookPath)
+  const row = worksheet.getRows(2, Math.max(worksheet.rowCount - 1, 0))?.find(candidate => {
+    const rowId = String(candidate.getCell('submissionId').value || '').trim()
+    const rowEmail = String(candidate.getCell('email').value || '').trim().toLowerCase()
+    return rowId === normalizedId && rowEmail === normalizedEmail
+  })
+  if (!row) return null
+
+  return {
+    submissionId: String(row.getCell('submissionId').value || ''),
+    submittedAt: row.getCell('submittedAt').value,
+    programme: String(row.getCell('programme').value || ''),
+    programmeCode: String(row.getCell('programmeCode').value || ''),
+    name: String(row.getCell('name').value || '').replace(/^'/, ''),
+    email: String(row.getCell('email').value || '').replace(/^'/, ''),
+    status: String(row.getCell('status').value || ''),
+  }
+}
+
 export function saveApplication(input, options = {}) {
   const workbookPath = options.workbookPath || process.env.ADMISSIONS_WORKBOOK_PATH || DEFAULT_WORKBOOK_PATH
   const application = validateApplication(input)
