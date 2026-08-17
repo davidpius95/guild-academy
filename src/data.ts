@@ -138,11 +138,11 @@ export const testimonials = [
 export const alumniWins = [
   {
     person: 'Pelz', handle: '@Pelz_Dev', result: 'Top 4', field: 'Among 1,000+ researchers',
-    detail: 'Sherlock competitive audit', href: 'https://x.com/GuildAcademy_/status/2047045425731907777',
+    detail: 'Sherlock competitive audit', signal: '2.5K views · 70 likes', href: 'https://x.com/GuildAcademy_/status/2047045425731907777',
   },
   {
     person: 'Edoscoba', handle: '@edoscoba', result: '2nd place', field: 'Code4rena leaderboard',
-    detail: 'Guild Academy Cohort IV learner', href: 'https://x.com/GuildAcademy_/status/2021882576558805270',
+    detail: 'Guild Academy Cohort IV learner', signal: '3,787 views · 69 likes', href: 'https://x.com/GuildAcademy_/status/2021882576558805270',
   },
   {
     person: 'Heeze', handle: '@heezeEth', result: '3rd place', field: 'Succinct Labs competition',
@@ -151,6 +151,65 @@ export const alumniWins = [
   {
     person: 'Zurab Anchabadze', handle: '@anchabadze', result: '6th place', field: 'Panoptic competition',
     detail: 'First solo medium finding on Code4rena', href: 'https://x.com/Pelz_Dev/status/2022384965707796615',
+  },
+  {
+    person: 'Theboiledcorn + Orhukl', handle: 'Cohort V', result: '1st place', field: 'Competitive audit contest',
+    detail: 'Seven weeks into the bootcamp', signal: '2.3K views · 40 likes', href: 'https://x.com/GuildAcademy_/status/1966874016074883256',
+  },
+  {
+    person: 'i_hizick', handle: 'Cohort IV', result: '6th place', field: 'CodeHawks leaderboard',
+    detail: 'Starknet staking audit · Part 2', signal: '2.3K views · 41 likes', media: '/evidence/ihizick-codehawks-result.jpg', mediaAlt: 'Public CodeHawks leaderboard shared with Guild Academy Cohort IV result', href: 'https://x.com/GuildAcademy_/status/1933644424816570377',
+  },
+  {
+    person: 'Edoscoba, Rocco, Ayoola + Kwesi', handle: 'Cohort IV', result: 'Top ranks', field: 'CodeHawks First Flights',
+    detail: 'Multiple learners on public leaderboards', signal: '985 views · 18 likes', media: '/evidence/cohort-iv-first-flights.jpg', mediaAlt: 'Guild Academy graphic listing top Cohort IV learners in CodeHawks First Flight challenges', href: 'https://x.com/GuildAcademy_/status/1923036163566108713',
+  },
+  {
+    person: 'Orhukl', handle: 'Cohort V', result: '$1,894.74', field: 'Code4rena Competition #10',
+    detail: 'Public award card shared with source evidence', signal: '1,852 views · 32 likes', media: '/evidence/orhukl-cohort-v-win.jpg', mediaAlt: 'Code4rena award card showing Orhukl earned 1,894.74 USDC in Competition 10', href: 'https://x.com/GuildAcademy_/status/2015795824207298992',
+  },
+]
+
+export const communityEvents = [
+  {
+    role: 'Academy-led', date: 'May 2026', title: 'Guild Academy community call',
+    description: 'A public conversation covering upcoming cohorts, Academy updates, community growth and opportunities ahead.',
+    signal: '2,000 views · 36 likes · 8 reposts', href: 'https://x.com/GuildAcademy_/status/2054268040934764996', accent: 'green',
+  },
+  {
+    role: 'Guest session', date: 'Sep 2025', title: 'Blockchain security with 0xRajeev',
+    description: 'A guest researcher session delivered for learners in Smart Contract Security Bootcamp Cohort V.',
+    signal: '3,300 views · 57 likes · 10 reposts', href: 'https://x.com/GuildAcademy_/status/1970216289718411665', accent: 'blue',
+  },
+  {
+    role: 'Live practice', date: 'Sep 2025', title: 'Live audit session with Pelz',
+    description: 'A late-night practical session showing how learner development continues through active audit work.',
+    signal: '5,200 views · 56 likes · 10 reposts', href: 'https://x.com/GuildAcademy_/status/1965929867641499795', accent: 'orange',
+  },
+  {
+    role: 'Public goods', date: 'Nov 2025', title: 'Graduate-led protocol reviews',
+    description: 'Graduating researchers began a private audit initiative offering eligible open-source projects professional-grade security feedback.',
+    signal: '1,524 views · 12 likes · 2 reposts', href: 'https://x.com/GuildAcademy_/status/1990356050340638884', accent: 'bone',
+  },
+  {
+    role: 'Ecosystem spotlight', date: 'Nov 2025', title: 'Web3 Security Summit Africa',
+    description: 'Guild Academy amplified the summit highlight from an event hosted by GuildAudits for Africa’s security community.',
+    signal: '2,655 views · 47 likes · 18 reposts', href: 'https://x.com/Web3summitafric/status/1989725015999189272', accent: 'summit',
+  },
+  {
+    role: 'Ecosystem invitation', date: 'Sep 2025', title: 'Summit registration and speaker call',
+    description: 'The Academy shared registration and speaker opportunities with African security researchers and builders.',
+    signal: '1,500 views · 25 likes · 7 reposts', href: 'https://x.com/GuildAcademy_/status/1971618562222838074', accent: 'mist',
+  },
+  {
+    role: 'Cohort practice', date: 'Oct 2025', title: 'Three live audits, one cohort',
+    description: 'Cohort V ran three live audit sessions simultaneously, turning collaborative review into practical training.',
+    signal: '2,000 views · 33 likes · 7 reposts', href: 'https://x.com/GuildAcademy_/status/1977689625096548373', accent: 'green',
+  },
+  {
+    role: 'Cohort finale', date: 'Jun 2025', title: 'Open-source audit assessment',
+    description: 'Cohort IV graduates completed a final assessment by delivering free, professional-grade security reviews for two protocols.',
+    signal: '1,800 views · 24 likes · 1 repost', href: 'https://x.com/GuildAcademy_/status/1933156383945261383', accent: 'blue',
   },
 ]
 
