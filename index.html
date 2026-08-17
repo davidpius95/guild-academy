@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#09131a" />
+    <meta name="description" content="Guild Academy is Guild Technologies' practice-led technical education and talent-development community." />
+    <script>
+      (() => {
+        const saved = localStorage.getItem('guild-academy-theme')
+        const theme = saved === 'light' || saved === 'dark'
+          ? saved
+          : matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+        document.documentElement.dataset.theme = theme
+        document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#071017' : '#f4f0e6'
+      })()
+    </script>
+    <link rel="icon" type="image/png" href="/brand/guild-academy-mark-transparent.png" />
+    <title>Guild Academy — Demonstrate capability</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

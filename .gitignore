@@ -1,0 +1,10 @@
+node_modules/
+dist/
+work/
+data/*.xlsx
+data/*.tmp
+*.tsbuildinfo
+.DS_Store
+.env
+.env.*
+!.env.example
