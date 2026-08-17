@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState, type FormEvent } from 'react'
 import { Link, Navigate, useParams, useSearchParams } from 'react-router-dom'
 import { ButtonLink, Icon, Metric, PageHero, ProgrammeCard, SectionHead, ThemeToggle } from './components'
-import { alumniWins, ecosystemProof, evidence, exploreNext, faqs, programmes, testimonials, type Evidence } from './data'
+import { alumniWins, ecosystemProofs, evidence, exploreNext, faqs, programmes, testimonials, type Evidence } from './data'
 
 function CapabilityMap() {
   return <div className="capability-map" aria-label="Animated map connecting learning, practice, demonstrated work and enterprise readiness">
@@ -40,11 +40,11 @@ function AlumniProofSection() {
     <SectionHead label="04 / Alumni signal" title={<>What learners say.<br/><em>Where their work lands.</em></>} body="Direct learner statements and public competition outcomes, each linked to the original X post. Individual results are evidence, not a promise of identical outcomes." action={<a className="inline-link" href="https://x.com/GuildAcademy_" target="_blank" rel="noreferrer">Review the X record <Icon name="external"/></a>}/>
     <div className="testimonial-stage">
       <a className="x-evidence-frame reveal" href={testimonials[0].href} target="_blank" rel="noreferrer"><img src="/evidence/alumni-roy-x.png?v=2" alt="Public X post from 0x_Roy thanking Guild Academy for sharpening his security skills"/><div><span><Icon name="check" size={14}/> Source capture</span><b>First Web3 security win</b><small>Open the original post <Icon name="external" size={13}/></small></div></a>
-      <div className="testimonial-quotes">{testimonials.map((item, index) => <a className="testimonial-card reveal" href={item.href} target="_blank" rel="noreferrer" key={item.handle}><span className="quote-mark">“</span><small>{item.context}</small><blockquote>{item.quote}</blockquote><p>{item.detail}</p><footer><div><b>{item.name}</b><span>{item.handle}</span></div><i>0{index + 1}</i></footer></a>)}</div>
+      <div className="testimonial-quotes">{testimonials.map((item, index) => <a className="testimonial-card reveal" href={item.href} target="_blank" rel="noreferrer" key={item.handle}><span className="quote-mark">“</span><small>{item.context}</small><blockquote>{item.quote}</blockquote><p>{item.detail}</p><span className="social-signal"><Icon name="check" size={13}/>{item.signal}<small>Observed 17 Aug 2026</small></span><footer><div><b>{item.name}</b><span>{item.handle}</span></div><i>0{index + 1}</i></footer></a>)}</div>
     </div>
     <div className="wins-heading"><span className="eyebrow">Alumni in the field</span><p>Public results from security competitions and audit platforms.</p></div>
     <div className="wins-grid">{alumniWins.map((win, index) => <a className="win-card reveal" href={win.href} target="_blank" rel="noreferrer" key={win.handle}><div><span>0{index + 1}</span><Icon name="external" size={15}/></div><strong>{win.result}</strong><h3>{win.field}</h3><p>{win.detail}</p><footer><b>{win.person}</b><span>{win.handle}</span></footer></a>)}</div>
-    <a className="ecosystem-proof reveal" href={ecosystemProof.href} target="_blank" rel="noreferrer"><div><span className="eyebrow">Ecosystem proof</span><strong>{ecosystemProof.title}</strong></div><div><h3>{ecosystemProof.subject}</h3><p>{ecosystemProof.description}</p></div><Icon name="external"/></a>
+    <div className="ecosystem-proof-list">{ecosystemProofs.map((item, index) => <a className={`ecosystem-proof ecosystem-proof--${index + 1} reveal`} href={item.href} target="_blank" rel="noreferrer" key={item.href}><div><span className="eyebrow">Ecosystem proof / 0{index + 1}</span><strong>{item.title}</strong></div><div><h3>{item.subject}</h3><p>{item.description}</p><small>{item.signal} · observed 17 Aug 2026</small></div><Icon name="external"/></a>)}</div>
   </section>
 }
 

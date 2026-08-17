@@ -112,6 +112,7 @@ export const testimonials = [
     context: 'Learner outcome · January 2026',
     quote: 'Thank you @GuildAcademy_ for sharpening me. The best is yet to come.',
     detail: 'Shared alongside a first Web3 security win with two high-severity and one low-severity findings.',
+    signal: '1,347 views · 19 likes · 6 reposts',
     href: 'https://x.com/thatboivikky/status/2013023802616168573',
   },
   {
@@ -120,7 +121,17 @@ export const testimonials = [
     context: 'First audit result · December 2025',
     quote: '@GuildAcademy_ thanks for the guidance.',
     detail: 'Published with evidence of a first competitive audit result.',
+    signal: '458 views · 7 likes · 2 reposts',
     href: 'https://x.com/Heis_muntasir/status/1999488284733636991',
+  },
+  {
+    name: 'Yasookeh',
+    handle: '@yasookeh',
+    context: 'First critical finding · December 2025',
+    quote: 'Enrolled @GuildAcademy_ to become a full time security researcher/auditor. Found my first critical.',
+    detail: 'A learner reflection describing the move into Web3 security and visible growth through the programme.',
+    signal: '596 views · 13 likes · 1 repost',
+    href: 'https://x.com/yasookeh/status/2003413254899662928',
   },
 ]
 
@@ -143,12 +154,22 @@ export const alumniWins = [
   },
 ]
 
-export const ecosystemProof = {
-  title: 'Knowledge Partner',
-  subject: '2025 Nigeria Web3 Landscape Report',
-  description: 'Guild Academy was named among the knowledge partners contributing to the second edition of the ecosystem report.',
-  href: 'https://x.com/GuildAcademy_/status/2046661100939141409',
-}
+export const ecosystemProofs = [
+  {
+    title: 'Knowledge Partner',
+    subject: '2025 Nigeria Web3 Landscape Report',
+    description: 'Guild Academy was named among the knowledge partners contributing to the second edition of the ecosystem report.',
+    signal: 'Verified ecosystem contribution',
+    href: 'https://x.com/GuildAcademy_/status/2046661100939141409',
+  },
+  {
+    title: 'Featured Contributor',
+    subject: 'Web3 security researcher session with Glider',
+    description: 'Glider featured Guild Academy alongside security practitioners in a public session about building a career in Web3 security.',
+    signal: '3,646 views · 68 likes · 9 reposts',
+    href: 'https://x.com/glider_xyz/status/2062477426865684578',
+  },
+]
 
 export const faqs = [
   ['Who is Guild Academy for?', 'Ambitious beginners, working professionals and experienced builders who want a structured route to demonstrated technical capability. Each programme publishes its own readiness level.'],
