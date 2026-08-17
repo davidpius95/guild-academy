@@ -57,7 +57,7 @@ export function HomePage() {
   return <>
     <section className="home-hero">
       <div className="hero-noise"/><div className="hero-layout">
-        <div className="hero-copy reveal"><span className="eyebrow eyebrow--light">Education / Talent / Practice</span><h1>Learn deeply.<br/><em>Build practically.</em><br/>Demonstrate capability.</h1><p>Guild Academy is a technical learning community for people who want to turn serious study into real, inspectable work.</p><div className="hero-actions"><ButtonLink to="/programs">Explore programmes</ButtonLink><a className="button button--ghost" href="#proof">See the proof <Icon name="arrow" size={16}/></a></div></div>
+        <div className="hero-copy reveal"><span className="eyebrow eyebrow--light">Education / Talent / Practice</span><h1>Learn deeply.<br/><em className="hero-build-line">Build practically.</em><br/>Demonstrate capability.</h1><p>Guild Academy is a technical learning community for people who want to turn serious study into real, inspectable work.</p><div className="hero-actions"><ButtonLink to="/programs">Explore programmes</ButtonLink><a className="button button--ghost" href="#proof">See the proof <Icon name="arrow" size={16}/></a></div></div>
         <div className="hero-visual reveal"><CapabilityMap/></div>
       </div>
       <div className="hero-foot"><span>AFRICA-ROOTED / GLOBALLY CONNECTED</span><span>SCROLL TO INSPECT ↓</span></div>
